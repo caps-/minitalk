@@ -6,7 +6,7 @@
 /*   By: pwhittin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 18:29:42 by pwhittin          #+#    #+#             */
-/*   Updated: 2022/11/07 17:45:50 by pwhittin         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:11:12 by pwhittin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ static int	input_errors(int argc, char **argv)
 }
 
 /*Sends the message string as binary to the server. Best way I can describe is 
- * that if the character is right shifted by i and if the shifted bit and 1 are
- * both 1 then we send SIGUSR1, otherwise we treat it as a 0 and use SIGUSR2.
- * We increment i and repeat it seven more times untill we've sent all 8 bits
+ * that if the character is right shifted by i and if the shifted bits are both
+ * 1 then we send SIGUSR1, otherwise we treat it as a 0 and use SIGUSR2. Next 
+ * we increment i and repeat it seven more times untill we've sent all 8 bits
  * for each character to the server. */
 static void	send_bin(int pid, char c)
 {
